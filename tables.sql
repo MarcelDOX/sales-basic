@@ -1,0 +1,17 @@
+CREATE TABLE products (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  type_id INT NOT NULL,
+  price DECIMAL(10, 2) NOT NULL
+);
+
+CREATE TABLE product_types (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE product_taxes (
+  id SERIAL PRIMARY KEY,
+  type_id INT NOT NULL,
+  tax DECIMAL(10, 2) NOT NULL
+);
